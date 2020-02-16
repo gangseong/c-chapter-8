@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+struct CandyBar {
+	const char *name;    //const 안 쓰면 안댐;;;;
+	double weight;
+	int cal;
+};
+void change( CandyBar& ft,  const char* p ="Millennium", double w=2.85, int n=350);
+int main()
+{
+	CandyBar tag1;
+	change(tag1,"use",20,4);
+	change(tag1);
+	return 0;
+}
+void change( CandyBar& ft, const char* p, double w, int n)
+{
+
+	ft.name =  p;
+	ft.weight = w;
+	ft.cal = n;
+	cout << "상표명은 : " << ft.name;
+	cout << " 무게는 : " << ft.weight;
+	cout << " 칼로리는 : " << ft.cal << "입니다. \n";
+}
